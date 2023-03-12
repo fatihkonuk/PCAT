@@ -9,7 +9,7 @@ const pageRoutes = require('./routes/pageRoutes');
 const app = express();
 
 //* Database Connection
-mongoose.connect('mongodb+srv://fatihkonuk000:admin1234@cluster0.uiqzert.mongodb.net/?retryWrites=true&w=majority', {
+mongoose.connect('mongodb+srv://fatihkonuk000:jsVYV1YK9BDtEPM6@cluster0.uiqzert.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 }).then((result) => {
