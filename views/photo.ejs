@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!--! Head -->
+<%- include('./partials/_header.ejs') %>
+
+<body>
+	<div class="tm-page-wrap mx-auto">
+		<div class="position-relative">
+			<!--! Navbar -->
+			<%- include('./partials/_navbar.ejs') %>
+			<div class="tm-welcome-container tm-fixed-header tm-fixed-header-1">
+				<div class="text-center">
+					<p class="pt-5 px-3 tm-welcome-text tm-welcome-text-2 mb-1 text-white mx-auto">Background image can be fixed. Content will simply slide over.</p>                	
+				</div>                
+            </div>
+
+			<!-- Header image -->
+            <div id="tm-fixed-header-bg"></div> 
+		</div>
+
+		<!-- Page content -->
+		<div class="container-fluid">
+			<div class="mx-auto tm-content-container">
+				<main>
+					<!-- İmage -->
+					<div class="row mb-5 pb-3">
+						<div class="col-8">
+							<img src="<%= photo.image %>" style="width: 100%;">
+						</div>
+						<div class="col-4">
+							<div class="col-12">
+								<!-- Photo description -->
+								<div class="tm-video-description-box">
+									<h2 class="mb-4 tm-video-title"><%= photo.title %></h2>
+									<p class="mb-2"><%= photo.description %></p>
+								</div>							
+							</div>
+							<div class="col-12 tm-share-box" >
+								<div style="display: flex; align-items: center; justify-content: center;">
+									<a href="/photos/edit/<%= photo._id %>" class="btn btn-primary mb-3 p-0 tm-btn-animate tm-btn-download tm-icon-download"><span>Update Details</span></a>	
+								</div>	
+								<div style="display: flex; align-items: center; justify-content: center;">
+									<a href="/photos/<%= photo._id %>?_method=DELETE" class="btn btn-danger p-0 tm-btn-animate tm-btn-download tm-icon-download" onclick="return confirm('Are You Sure?')"><span>Delete Photo</span></a>	
+								</div>								
+							</div>
+						</div>
+					</div>
+				</main>
+
+				<!--! Footer -->
+                <%- include('./partials/_footer.ejs') %>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
